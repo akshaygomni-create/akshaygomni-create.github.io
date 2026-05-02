@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OmniStudio Integration</title>
+    
+    <script src='https://orgfarm-2c44b0d835-dev-ed.develop.my.salesforce-com.ylu8mrojrmp21wmr8q2qzf63e15qidi.ac.crm.dev:6101/omnistudio/embed.js'></script>
+</head>
+<body>
+
+    <h1>My Salesforce Integration</h1>
+
+    <omnistudio-flexcard flexcard-name='OmniOutTesting' exposedAttributes='{}'></omnistudio-flexcard>
+
+    <script type='text/javascript'>
+        // Replace with your actual Frontdoor URL
+        const frontDoorUrl = 'https://orgfarm-2c44b0d835-dev-ed.develop.my.salesforce-com.ylu8mrojrmp21wmr8q2qzf63e15qidi.ac.crm.dev:6101/secur/frontdoor.jsp?otp=00Dxx00uOsOyMs0%21AQEAQNr1kls4nLFZ1hKUaPLX02TJfgn98xGAV3j_sxcPZVi_a5qFzlgggYF0zAIdZm4SXvTZrsCTnKnXDPxmDPYiSOlAU3jq&cshc=x000001X7oXx00uOsOyMs0';
+        const appId = '1Usxx0000004CAeCAM';
+        const baseUrl = 'https://orgfarm-2c44b0d835-dev-ed.develop.my.salesforce-com.ylu8mrojrmp21wmr8q2qzf63e15qidi.ac.crm.dev:6101';
+        
+        // Initialize the component
+        if (typeof initOmnistudio === 'function') {
+            initOmnistudio(baseUrl, appId, frontDoorUrl);
+        } else {
+            console.error('initOmnistudio function not found. Check script load.');
+        }
+    </script>
+
+</body>
+</html>
