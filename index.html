@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <h1>My Salesforce Integration</h1>
+    <h1>My Salesforce Integration 4</h1>
 
     <omnistudio-flexcard flexcard-name='OmniOutTesting' exposedAttributes='{}'></omnistudio-flexcard>
 
@@ -26,21 +26,6 @@
         if (typeof initOmnistudio === 'function') {
             initOmnistudio(baseUrl, appId, frontDoorUrl);
         }
-
-        // Initialize Lightning Out Components via JS API
-        // Ensure "c:YourLightningOutAppName" matches the API name of your Lightning Out App in Salesforce
-        $Lightning.use("c:YourLightningOutAppName", function() {
-            $Lightning.createComponent("c:omniscript-lightning-out-wrapper-internal",
-                {},
-                "omniscript-container",
-                function(cmp) { console.log("Omniscript loaded"); }
-            );
-            $Lightning.createComponent("c:flexcard-lightning-out-wrapper-internal",
-                {},
-                "flexcard-container",
-                function(cmp) { console.log("FlexCard loaded"); }
-            );
-        }, baseUrl);
     </script>
 
 </body>
